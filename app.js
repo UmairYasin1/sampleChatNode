@@ -53,6 +53,8 @@ const sessionInit = session({
 
 app.use(sessionInit);
 
+app.use(express.static(__dirname + "./build"));
+
 //public folder as static
 app.use(express.static(path.resolve(__dirname, "./public")));
 
